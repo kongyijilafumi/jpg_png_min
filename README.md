@@ -1,4 +1,4 @@
-## 本工具只适用windows系统，压缩png，jpg图片
+## 本工具只适用windows系统，压缩png，jpg图片(当前版本1.0.1)
 
 * 文件目录
 ```
@@ -29,3 +29,8 @@ root\compress_images\work\lucky.png
 root\compress_images\test\dog.jpg
 root\compress_images\a1\cat.png
 ```
+
+### 版本说明
+* 1.0.0 
+* 1.0.1
+> 优化检测文件夹，小于1kb内存的图片直接转移到输出文件夹。压缩出现错误，压缩不了大小的图片也直接转移到输出文件夹。
