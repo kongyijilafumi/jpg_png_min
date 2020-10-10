@@ -122,12 +122,10 @@ function main() {
         })
     }
 
-    if (pngArray.length != 0) {
-        //压缩png
-        pngArray = rmSame(pngArray)
-        pngCompress(pngArray, pngArray.length - 1)
-    }
 
+    //压缩png
+    pngArray = rmSame(pngArray)
+    pngCompress(pngArray, pngArray.length - 1)
 
 }
 
@@ -167,36 +165,8 @@ function rmSame(arr) {
 
 //png压缩图片
 function pngCompress(arr, index) {
-    if (index < 0) {
-        console.log("     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   \n")
-        console.log("                        _oo0oo_                  ");
-        console.log("                       o8888888o                 ");
-        console.log(`                       88" . "88                 `);
-        console.log("                       (| -_- |)                 ");
-        console.log("                       0\\  =  /0                 ");
-        console.log("                     ___/`---'\\___               ");
-        console.log("                   .' \\\\|     |// '.             ");
-        console.log("                  / \\\\|||  :  |||// \\            ");
-        console.log("                 / _||||| -:- |||||- \\           ");
-        console.log("                |   | \\\\\\  - /// |   |           ");
-        console.log("                | \\_|  ''\\---/''  |_/ |          ");
-        console.log("                \\  .-\\__  '-'  ___/-. /          ");
-        console.log("              ___'. .'  /--.--\\  `. .'___        ");
-        console.log(`           ."" '<  '.___\\_<|>_/___.' >' "".      `);
-        console.log("          | | :  `- \\`.;`\\ _ /`;.`/ - ` : | |    ");
-        console.log("          \\  \\ `_.   \\_ __\\ /__ _/   .-` /  /    ");
-        console.log("      =====`-.____`.___ \\_____/___.-`___.-'===== ");
-        console.log("                        `=---='                  ");
-        console.log("     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   \n")
-        console.log("--------------------------------------------------")
-        console.log(`压缩图片完成，请到目录：${outputDir}查看`)
-        console.timeEnd("共耗时：")
-        console.log("\n本窗口在5秒后关闭！")
-        setTimeout(() => {
-            rl.close()
-        }, 5000)
-        return
-    }
+    //压缩结束
+    if (index < 0) return over()
 
     let pathDir = path.dirname(arr[index]['output'])
     let filename = arr[index]['filename']
@@ -219,3 +189,34 @@ function pngCompress(arr, index) {
 
 }
 
+//压缩结束
+
+function over() {
+    console.log("     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   \n")
+    console.log("                        _oo0oo_                  ");
+    console.log("                       o8888888o                 ");
+    console.log(`                       88" . "88                 `);
+    console.log("                      (|  -_-  |)                 ");
+    console.log("                      0\\  =  /0                 ");
+    console.log("                     ___/`---'\\___               ");
+    console.log("                   .' \\\\|     |// '.             ");
+    console.log("                  / \\\\|||  :  |||// \\            ");
+    console.log("                 / _||||| -:- |||||- \\           ");
+    console.log("                |   | \\\\\\  - /// |   |           ");
+    console.log("                | \\_|  ''\\---/''  |_/ |          ");
+    console.log("                \\  .-\\__  '-'  ___/-. /          ");
+    console.log("              ___'. .'  /--.--\\  `. .'___        ");
+    console.log(`           ."" '<  '.___\\_<|>_/___.' >' "".      `);
+    console.log("          | | :  `- \\`.;`\\ _ /`;.`/ - ` : | |    ");
+    console.log("          \\  \\ `_.   \\_ __\\ /__ _/   .-` /  /    ");
+    console.log("      =====`-.____`.___ \\_____/___.-`___.-'===== ");
+    console.log("                        `=---='                  ");
+    console.log("     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   \n")
+    console.log("--------------------------------------------------")
+    console.log(`压缩图片完成，请到目录：${outputDir}查看`)
+    console.timeEnd("共耗时：")
+    console.log("\n本窗口在5秒后关闭！")
+    setTimeout(() => {
+        rl.close()
+    }, 5000)
+}
