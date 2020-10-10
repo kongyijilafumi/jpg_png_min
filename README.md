@@ -1,4 +1,4 @@
-## 本工具只适用windows系统，压缩png，jpg图片(当前版本1.0.1)
+## 本工具只适用windows系统，压缩png，jpg图片(当前版本1.0.2)
 
 * 文件目录
 ```
@@ -31,6 +31,12 @@ root\compress_images\test\dog.jpg
 root\compress_images\a1\cat.png
 ```
 
+### 使用nodejs来运行程序
+1. src文件夹下载下来
+2. 以src文件为目录 运行 npm install 
+3. node app.js //直接运行程序
+* 若安装```imagemin-pngquant```失败,请不要气馁,继续一直安装!  
+直到成功安装所有包为止.安装之后运行 ```node app.js``` 即可
 ### 版本说明
 * 1.0.0 
 * 1.0.1
