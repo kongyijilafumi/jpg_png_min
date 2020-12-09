@@ -1,0 +1,22 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {},
+  "devDependencies": {
+    "imagemin": "^7.0.1",
+    "imagemin-pngquant": "^9.0.1",
+    "images": "^3.2.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bin": "app.js",
+  "pkg": {
+    "assets": "vendor/**/*"
+  }
+}
