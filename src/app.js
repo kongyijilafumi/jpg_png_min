@@ -155,7 +155,7 @@ function rmSame(arr) {
         } else if (newArray.indexOf(element['filename']) == -1 && (fs.statSync(element['filename']).size <= 1024)) {
             let pathDir = path.dirname(element['output'])
             testDir(pathDir)
-            fs.renameSync(element['filename'], element['output'])
+            fs.createReadStream(element['filename']).pipe(fs.createWriteStream(element['output']))
             console.log(`图片${element['filename']}内存过小，直接转移到${element['output']}`)
         }
     }
@@ -183,7 +183,7 @@ function pngCompress(arr, index) {
         pngCompress(arr, index - 1)
     }).catch(err => {
         console.log(`${arr[index]['filename']}图片压缩不了了，直接转移到${arr[index]['output']}`)
-        fs.renameSync(arr[index]['filename'], arr[index]['output'])
+        fs.createReadStream(arr[index]['filename']).pipe(fs.createWriteStream(arr[index]['output']))
         pngCompress(arr, index - 1)
     });
 
@@ -213,7 +213,7 @@ function over() {
     console.log("                        `=---='                  ");
     console.log("     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   \n")
     console.log("--------------------------------------------------")
-    console.log(`压缩图片完成，请到目录：${outputDir}查看`)
+    console.log(`压缩图片完成，请到目录：\n ${outputDir} \n查看`)
     console.timeEnd("共耗时：")
     console.log("\n本窗口在5秒后关闭！")
     setTimeout(() => {
