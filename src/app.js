@@ -1,39 +1,3 @@
-/*
- * @Author: zzz
- * @Date: 2020-05-27 10:47:00
- * @LastEditTime: 2020-05-27 11:16:30
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: \compressImages\app.js
- */
-/*
- *                        _oo0oo_
- *                       o8888888o
- *                       88" . "88
- *                       (| -_- |)
- *                       0\  =  /0
- *                     ___/`---'\___
- *                   .' \\|     |// '.
- *                  / \\|||  :  |||// \
- *                 / _||||| -:- |||||- \
- *                |   | \\\  - /// |   |
- *                | \_|  ''\---/''  |_/ |
- *                \  .-\__  '-'  ___/-. /
- *              ___'. .'  /--.--\  `. .'___
- *           ."" '<  `.___\_<|>_/___.' >' "".
- *          | | :  `- \`.;`\ _ /`;.`/ - ` : | |
- *          \  \ `_.   \_ __\ /__ _/   .-` /  /
- *      =====`-.____`.___ \_____/___.-`___.-'=====
- *                        `=---='
- * 
- * 
- *      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * 
- *            佛祖保佑       永不宕机     永无BUG
- */
-
-
-
 const fs = require("fs")
 const imagemin = require('imagemin');
 const imageminPngquant = require('imagemin-pngquant');
@@ -197,7 +161,7 @@ function over() {
     console.log("                       o8888888o                 ");
     console.log(`                       88" . "88                 `);
     console.log("                      (|  -_-  |)                 ");
-    console.log("                      0\\  =  /0                 ");
+    console.log("                       0\\  =  /0                 ");
     console.log("                     ___/`---'\\___               ");
     console.log("                   .' \\\\|     |// '.             ");
     console.log("                  / \\\\|||  :  |||// \\            ");
